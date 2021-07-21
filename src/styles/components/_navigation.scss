@@ -1,32 +1,94 @@
-.navigation {   
-    display: flex;      
-    list-style-type: none;
-    align-items: center;
-    justify-content:flex-end;
-    
-    &--bar{
-        
+@use "../abstracts/breakpoints" as media;
+.navigationweb {
+  display: none;
+}
+.navigation {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: flex-end;
+  &__bar {
+    display: none;
+  }
+  &__label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+  &__input {
+    display: none;
+    &:checked ~ ul {
+      display: block;
     }
+    &:checked ~ navigation__label {
+      background-color: #3663a2;
+    }
+  }
+
+  &__barmobile {
+    display: none;
+    margin-top: 0.5rem;
+    margin-bottom: -5rem;
+    padding: 0;
+    width: 200px;
     &--btn {
-       
-        display: inline;
-        opacity: 1;
+      display: block;
+      background: transparent;
+      margin: 0;
+      padding: 10px;
+      list-style: none;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        filter: brightness(110%);
+      }
+    }
+  }
+  &--link {
+    color: white;
+    background-color: #0b5057;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0.1rem;
+    opacity: 1;
+    &:hover {
+      background-color: #3663a2;
+    }
+    &:focus {
+      background-color: white;
+    }
+  }
+}
+@include media.query(">=sm") {
+  .navigation {
+    display: none;
+  }
+  .navigationweb {
+    display: inline;
+    &--btn {
+      list-style: none;
+      display: inline;
+      opacity: 1;
     }
     &--link {
-            
-            color:white;
-            background-color:#0B5057;
-            border-radius: 10px;
-            padding: 0.5rem;
-            margin: 0.1rem;
-            opacity: 1;
-            &:hover{
-                background-color:#3663A2;
-            }
-            &:focus{
-                background-color:white;
-            }
-
-            
-    }   
+      color: white;
+      background-color: #0b5057;
+      border-radius: 10px;
+      padding: 0.5rem;
+      margin: 0.1rem;
+      opacity: 1;
+      &:hover {
+        background-color: #3663a2;
+      }
+      &:focus {
+        background-color: white;
+      }
+    }
+  }
 }

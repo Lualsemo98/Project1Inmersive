@@ -1,106 +1,100 @@
-.geography{
-    background-color: #85929E;
-    border-radius: rem(90px);
-    opacity: 0.8;
-    padding: 0.5rem;
-    padding-top: 3.5rem;
-    margin: 0.2rem;
-    margin-top: -3rem;
-    padding-bottom: 4rem;
-    transition: transform 0.2s ease-in-out;
-    &--title{
-        text-align: center;
-        margin-top: -2.5rem;
+@use "../abstracts/breakpoints" as media;
+
+.geography {
+  background-color: #85929e;
+  border-radius: rem(90px);
+  opacity: 0.8;
+  padding: 0.5rem;
+  padding-top: 3.5rem;
+  margin: 0.2rem;
+  margin-top: -3rem;
+  padding-bottom: 20rem;
+  transition: transform 0.2s ease-in-out;
+
+  &--title {
+    display: flex;
+    justify-content: center;
+  }
+  &--subtitle {
+    bottom: 10%;
+    left: 50px;
+    margin-top: 5vmax;
+  }
+  &--2ndsubtitle {
+    bottom: 10%;
+
+    margin-top: 5vmax;
+  }
+
+  &__map {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 2rem;
+    &--image {
+      margin-bottom: 10vmax;
+      box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
+      overflow: hidden;
+      transition: transform 0.2s ease-in;
+      &:hover {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
     }
-    &--subtitle{
-        color: black;
-        padding-left: 2.5rem;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        margin-top: -25%;
+    &--image1 {
+      width: 40%;
+      height: auto;
+      float: right;
+      margin-top: -25vmax;
+      
+      margin-bottom:rem;
+      box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
+      overflow: hidden;
     }
-    &--2ndtitle{
-        text-align: center;
-        margin-top: -2.5rem;
-        float:left;
+  }
+  &:hover {
+    transform: translateY(-10%);
+  }
+  &__list {
+    margin-top: 5vmax;
+    &--li {
+      display: flex;
     }
-    &--2ndsubtitle{
-        color: black;
-        padding-left: 2.5rem;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        margin-top: -25%;
-        margin-left: 80%;
+    &--province {
+      color: white;
+      background-color: #559382;
+      border-radius: 10px;
+      padding: 0.5rem;
+      margin-right: 0;
+
+      opacity: 1;
+      &:hover {
+        background-color: #3663a2;
+      }
+      &:focus {
+        background-color: white;
+      }
     }
-    &__map{
-        
-        justify-content: center;
-        align-items: center;
-        display: flex;
-            &--image{
-                box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
-                overflow:hidden;
-                transition: transform 0.2s ease-in;
-                &:hover{
-                    -webkit-transform:scale(1.2);transform:scale(1.2);
-                }
-    
-            }
-        }
-        &:hover{
-            transform: translateY(-10%);
-        }
-        &__list {
-            
-            display: flex;
-            flex-direction: column;
-            opacity: 1;
-            padding: 1rem;
-            margin-bottom:  10rem;
-            
-            
-            &--li{
-                display: flex;
-                flex-direction: column;
-                
-            }
-            
-            &--province {
-                
-                color:white;
-                background-color:#559382;
-                border-radius: 10px;
-                padding: 0.5rem;
-                margin-right: 80%;
-                
-                opacity: 1;
-                &:hover{
-                    background-color:#3663A2;
-                }
-                &:focus{
-                    background-color:white;
-                }
-    
-                
-        }
-        &--point{
-            color:white;
-                background-color:#559382;
-                border-radius: 10px;
-                padding: 0.5rem;
-                
-                margin-left: 80%;
-                
-                opacity: 1;
-                &:hover{
-                    background-color:#3663A2;
-                }
-                &:focus{
-                    background-color:white;
-                }
-        } 
-        }
-          
-    
-    
+  }
+  &__2list {
+    &--li {
+      display: flex;
+    }
+    &--point {
+      color: white;
+      background-color: #559382;
+      border-radius: 10px;
+      padding: 0.5rem;
+
+      margin-left: 0;
+
+      opacity: 1;
+      &:hover {
+        background-color: #3663a2;
+      }
+      &:focus {
+        background-color: white;
+      }
+    }
+  }
 }

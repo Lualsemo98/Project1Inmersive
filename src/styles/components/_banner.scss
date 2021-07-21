@@ -1,51 +1,102 @@
-.banner{
-    
-    font-family: serif;
-    &--image{
-        
-        width: 100%;
-        height: 100vh;
-        border-radius: 0 0 85% 85% / 30%;
-        
+@use "../abstracts/breakpoints" as media;
+
+.banner {
+  font-family: serif;
+  width: 100%;
+  &--image {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 85% 85% / 30%;
+  }
+
+  &__text {
+    bottom: 88%;
+    right: 20px;
+    color: white;
+    position: absolute;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    @include media.query(">=mm") {
+      bottom: 78%;
+      right: 20px;
     }
-    &__text{
-        
-        color: white;
-        position: absolute;
-        transform: translate(150vh, -20vw);
-        display: flex;
-        padding: 0%;
-        margin: 0%;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-        z-index: 2;
-        
-        
-        &:hover{
-            box-shadow: 2rem 2rem 2rem 2rem black;
-            transition: box-shadow 0.5s ease-in-out;
-            
-        }
-        
-
-        &--primary{
-            
-            border-bottom:#CD7F1B 5px solid;
-            font-size: 5rem;
-            font-weight: 400;
-            padding: 0%;
-            margin: 0%;
-
-        }
-        &--second{
-            font-size: 4em;
-            font-weight: 200;
-            padding: 0%;
-            margin: 0%;
-
+    @include media.query(">=sm") {
+      bottom: 58%;
+      right: 20px;
     }
-    
 
+    @include media.query(">=md") {
+      bottom: 48%;
+      right: 20px;
     }
-} 
+    @include media.query(">=lg") {
+      bottom: 48%;
+      right: 20px;
+    }
+
+    &:hover {
+      box-shadow: 2rem 2rem 2rem 2rem black;
+      transition: box-shadow 0.5s ease-in-out;
+    }
+
+    &--primary {
+      border-bottom: #cd7f1b 5px solid;
+      font-size: 3rem;
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+      @include media.query(">=mm") {
+        font-size: 3rem;
+      }
+    }
+    &--second {
+      font-size: 2.5rem;
+      font-weight: 200;
+      padding: 0;
+      margin: 0;
+      @include media.query(">=mm") {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @include media.query(">=sm") {
+    &--image {
+      width: 100%;
+      height: auto;
+      border-radius: 0 0 85% 85% / 30%;
+    }
+    &__text {
+      color: white;
+      position: absolute;
+
+      display: flex;
+      padding: 0;
+      margin: 0;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      &:hover {
+        box-shadow: 2rem 2rem 2rem 2rem black;
+        transition: box-shadow 0.5s ease-in-out;
+      }
+
+      &--primary {
+        border-bottom: #cd7f1b 5px solid;
+        font-size: 5rem;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+      }
+      &--second {
+        font-size: 4em;
+        font-weight: 200;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

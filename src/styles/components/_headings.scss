@@ -1,48 +1,22 @@
 @use "../abstracts/breakpoints" as media;
 
-.heading {
-  font-size: rem(16px);
-  color: #333;
-
-  @include media.query(">=sm") {
-    font-size: rem(52px);
-    color: #e53935;
-  }
-
-  @include media.query(">1000px", "<1005px") {
-    font-size: rem(100px);
-    color: #8e24aa;
-  }
-
-  @include media.query(">=md") {
-    font-size: rem(72px);
-    color: #1e88e5;
-  }
-
-  @include media.query(">=lg") {
-    font-size: rem(82px);
-    color: #43a047;
-  }
-
-  @include media.query(">=xl") {
-    font-size: rem(92px);
-    color: #fb8c00;
-  }
-}
-.header_section{
+.header_section {
   display: flex;
-  background-color: rgb(58,227,214);
-    background-image: linear-gradient(90deg, rgba(58,227,214,1) 0%, rgba(53,178,204,1) 0%, rgba(76,86,184,0.7791491596638656) 100%);
-  opacity:0.8;
-  position:fixed;
+  background-color: rgb(58, 227, 214);
+  background-image: linear-gradient(
+    90deg,
+    rgba(58, 227, 214, 1) 0%,
+    rgba(53, 178, 204, 1) 0%,
+    rgba(76, 86, 184, 0.7791491596638656) 100%
+  );
+  opacity: 0.8;
+  position: fixed;
   width: 100%;
-  
- 
-  &--imagenav{
+  z-index: 100;
+
+  &--imagenav {
     width: rem(75px);
     height: auto;
     align-self: flex-start;
-    
-
-}
+  }
 }
