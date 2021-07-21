@@ -69,12 +69,13 @@
         border-radius: 180px;
       }
       &--title {
+
         align-self: flex-start;
         text-align: left;
-        background-color: #b6dade;
+        background-color: #1e9ed1;
         font-size: 1rem;
         color: black;
-        padding: 0.5px;
+        padding: 1.5px;
         margin: 10px;
 
         margin-top: -2rem;
@@ -91,9 +92,10 @@
         }
       }
       &--subtitle {
+        background-color: #1e9ed1;
         align-self: center;
-        padding: 0.5px;
-        color: white;
+        padding: 3.5px;
+        color: black;
         font-size: 1rem;
         margin-top: 2.5rem;
         padding-bottom: 0px;
